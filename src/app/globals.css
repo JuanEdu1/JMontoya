@@ -14,10 +14,13 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Disable text size auto-adjust on iOS rotation */
+  -webkit-text-size-adjust: 100%;
 }
 
 html,
@@ -25,6 +28,23 @@ body {
   background: var(--ink);
   color: white;
   overflow-x: hidden;
+  /* Smooth momentum scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent iOS auto-zoom on input focus by ensuring min 16px font-size */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: inherit;
+  }
 }
 
 ::selection {

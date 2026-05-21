@@ -25,9 +25,14 @@ export default function Navbar() {
         scrolled ? 'bg-ink/85 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-        <a href="#inicio" aria-label="Inicio JMontoya">
-          <Logo />
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 h-[68px] sm:h-20 flex items-center justify-between">
+        <a href="#inicio" aria-label="Inicio JMontoya" className="block">
+          <span className="sm:hidden">
+            <Logo size="sm" priority />
+          </span>
+          <span className="hidden sm:block">
+            <Logo size="md" priority />
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-10">
@@ -56,11 +61,12 @@ export default function Navbar() {
         </motion.a>
 
         <button
-          className="md:hidden text-white p-2 -mr-2"
+          className="md:hidden text-white w-11 h-11 -mr-2 flex items-center justify-center"
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={open}
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -73,22 +79,24 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden bg-ink/95 backdrop-blur-xl border-t border-white/5"
           >
-            <div className="px-6 py-6 flex flex-col gap-5">
+            <div className="px-5 sm:px-6 py-4 flex flex-col">
               {siteConfig.navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-white/80 hover:text-signal transition tracking-wide"
+                  className="text-white/80 hover:text-signal active:text-signal transition tracking-wide py-3.5 border-b border-white/5 last:border-0 flex items-center justify-between group"
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  <span className="text-signal opacity-0 group-hover:opacity-100 transition">→</span>
                 </a>
               ))}
               <a
                 href={siteConfig.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-signal text-white px-4 py-3 text-center text-sm uppercase tracking-wider flex items-center justify-center gap-2 mt-2"
+                onClick={() => setOpen(false)}
+                className="bg-signal text-white px-4 py-3.5 text-center text-sm uppercase tracking-wider flex items-center justify-center gap-2 mt-4"
               >
                 <MessageCircle className="w-4 h-4" />
                 Agendar por WhatsApp

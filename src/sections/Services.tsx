@@ -66,10 +66,10 @@ export default function Services() {
                   </div>
                 )}
 
-                <div className="p-8 lg:p-10">
-                  <div className="flex items-start justify-between mb-8">
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <div className="flex items-start justify-between mb-6 sm:mb-8 gap-3">
                     <div
-                      className={`w-16 h-16 flex items-center justify-center ${
+                      className={`w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 flex items-center justify-center ${
                         service.highlighted
                           ? 'bg-white/15 backdrop-blur-sm'
                           : 'bg-signal/10 border border-signal/30'
@@ -78,11 +78,11 @@ export default function Services() {
                       <Icon
                         className={service.highlighted ? 'text-white' : 'text-signal'}
                         strokeWidth={1.5}
-                        size={28}
+                        size={26}
                       />
                     </div>
                     <span
-                      className={`text-[10px] tracking-[0.25em] uppercase pt-2 ${
+                      className={`text-[10px] tracking-[0.25em] uppercase pt-2 text-right ${
                         service.highlighted ? 'text-white/70' : 'text-white/30'
                       }`}
                     >
@@ -90,7 +90,7 @@ export default function Services() {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-4xl md:text-5xl tracking-tight mb-3 text-white leading-none">
+                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight mb-3 text-white leading-none">
                     {service.title}
                   </h3>
 
@@ -110,7 +110,7 @@ export default function Services() {
                     {service.price ? (
                       <div className="flex items-baseline gap-2">
                         <span
-                          className={`font-display text-5xl md:text-6xl tracking-tight leading-none ${
+                          className={`font-display text-4xl sm:text-5xl md:text-6xl tracking-tight leading-none ${
                             service.highlighted ? 'text-white' : 'text-signal'
                           }`}
                         >

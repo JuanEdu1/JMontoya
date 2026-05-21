@@ -6,8 +6,8 @@ interface LogoProps {
 }
 
 const sizeMap = {
-  sm: { width: 75, className: 'h-9' },
-  md: { width: 95, className: 'h-12' },
+  sm: { width: 70, className: 'h-8' },
+  md: { width: 90, className: 'h-11' },
   lg: { width: 140, className: 'h-[72px]' },
 };
 
@@ -17,13 +17,15 @@ export default function Logo({ size = 'md', priority = false }: LogoProps) {
   const height = Math.round(width / (332 / 178));
 
   return (
-    <Image
-      src="/logo.png"
-      alt="CDA JMontoya — Centro de Diagnóstico Automotor"
-      width={width}
-      height={height}
-      priority={priority}
-      className={`${className} w-auto object-contain`}
-    />
+    <div className="inline-flex items-center bg-white px-2.5 py-1.5 rounded-sm shadow-md shadow-black/20">
+      <Image
+        src="/logo.png"
+        alt="CDA JMontoya — Centro de Diagnóstico Automotor"
+        width={width}
+        height={height}
+        priority={priority}
+        className={`${className} w-auto object-contain`}
+      />
+    </div>
   );
 }
