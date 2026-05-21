@@ -54,7 +54,7 @@ export default function SplashScreen() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <Logo size="lg" priority />
+            <Logo size="xl" priority />
           </motion.div>
 
           <div className="relative mt-10 w-40 h-px bg-ink/10 overflow-hidden">

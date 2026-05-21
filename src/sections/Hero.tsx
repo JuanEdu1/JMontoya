@@ -36,14 +36,14 @@ export default function Hero() {
         className="absolute top-[60%] left-0 w-1/4 h-px bg-gradient-to-l from-signal/40 to-transparent origin-left"
       />
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10 w-full pt-28 sm:pt-32 pb-20 z-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10 w-full pt-24 sm:pt-28 pb-12 sm:pb-16 z-10">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center gap-3 mb-8"
+              className="flex items-center gap-3 mb-5 sm:mb-6"
             >
               <span className="w-8 h-px bg-signal" />
               <span className="text-xs tracking-[0.3em] uppercase text-signal font-medium">
@@ -56,7 +56,7 @@ export default function Hero() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-[clamp(3.25rem,11vw,8rem)] leading-[0.85] tracking-tight text-ink"
+                className="font-display text-[clamp(2.75rem,8.5vw,6rem)] leading-[0.88] tracking-tight text-ink"
               >
                 Revisión
                 <br />
@@ -70,7 +70,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.95 }}
-              className="font-cursive text-4xl sm:text-5xl md:text-6xl text-ink/80 mt-2 mb-8"
+              className="font-cursive text-3xl sm:text-4xl md:text-5xl text-ink/80 mt-1 mb-5 sm:mb-6"
             >
               para tu moto
             </motion.p>
@@ -79,7 +79,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
-              className="text-base sm:text-lg text-ink/65 max-w-xl mb-10 leading-relaxed"
+              className="text-sm sm:text-base text-ink/65 max-w-xl mb-7 sm:mb-8 leading-relaxed"
             >
               Confianza, transparencia y rapidez. Diagnóstico certificado en{' '}
               <span className="text-ink font-medium">25 a 30 minutos</span> sin
@@ -98,7 +98,7 @@ export default function Hero() {
                 href={siteConfig.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-signal hover:bg-signal-dark text-white px-7 py-4 text-sm uppercase tracking-[0.18em] transition shadow-lg shadow-signal/30 hover:shadow-signal/60"
+                className="inline-flex items-center justify-center gap-3 bg-signal hover:bg-signal-dark text-white px-6 py-3.5 text-sm uppercase tracking-[0.18em] transition shadow-lg shadow-signal/30 hover:shadow-signal/60"
               >
                 <MessageCircle className="w-4 h-4" />
                 Agendar ahora
@@ -107,7 +107,7 @@ export default function Hero() {
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
                 href="#servicios"
-                className="inline-flex items-center justify-center gap-3 border border-ink/30 hover:bg-ink hover:text-white text-ink px-7 py-4 text-sm uppercase tracking-[0.18em] transition"
+                className="inline-flex items-center justify-center gap-3 border border-ink/30 hover:bg-ink hover:text-white text-ink px-6 py-3.5 text-sm uppercase tracking-[0.18em] transition"
               >
                 Conocer más
                 <ArrowRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.4 }}
-              className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-x-10 sm:gap-y-3 mt-12 sm:mt-14 pt-8 border-t border-ink/10"
+              className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-x-10 sm:gap-y-3 mt-8 sm:mt-10 pt-6 border-t border-ink/10"
             >
               {[
                 { num: '+5K', label: 'Motos' },

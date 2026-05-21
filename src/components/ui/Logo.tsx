@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 interface LogoProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   priority?: boolean;
 }
 
@@ -9,6 +9,7 @@ const sizeMap = {
   sm: { width: 70, className: 'h-8' },
   md: { width: 90, className: 'h-11' },
   lg: { width: 140, className: 'h-[72px]' },
+  xl: { width: 220, className: 'h-[118px]' },
 };
 
 export default function Logo({ size = 'md', priority = false }: LogoProps) {
