@@ -40,7 +40,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="relative py-28 lg:py-32 bg-ink-800 overflow-hidden"
+      className="relative py-28 lg:py-32 bg-bone overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
         <motion.div
@@ -57,7 +57,7 @@ export default function Contact() {
             </span>
             <span className="w-8 h-px bg-signal" />
           </div>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[0.95]">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-ink tracking-tight leading-[0.95]">
             Estamos a una
             <br />
             <span className="text-signal">llamada de distancia</span>
@@ -72,15 +72,14 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="relative aspect-[4/3] bg-ink border border-white/10 overflow-hidden group">
+            <div className="relative aspect-[4/3] bg-white border border-ink/10 overflow-hidden group shadow-sm shadow-ink/5">
               <iframe
                 src={`https://maps.google.com/maps?q=${siteConfig.location.coordinates.lat},${siteConfig.location.coordinates.lng}&z=15&output=embed`}
                 width="100%"
                 height="100%"
                 style={{
                   border: 0,
-                  filter:
-                    'grayscale(0.8) invert(0.92) hue-rotate(180deg) brightness(0.9) contrast(0.95)',
+                  filter: 'grayscale(0.3) contrast(0.95)',
                 }}
                 allowFullScreen
                 loading="lazy"
@@ -96,48 +95,48 @@ export default function Contact() {
             <div className="grid sm:grid-cols-2 gap-4">
               <a
                 href={`tel:+57${siteConfig.phone}`}
-                className="group p-5 bg-ink border border-white/10 hover:border-signal/50 hover:bg-signal/[0.03] transition flex items-start gap-4"
+                className="group p-5 bg-white border border-ink/10 hover:border-signal/50 hover:bg-signal/[0.04] transition flex items-start gap-4 shadow-sm shadow-ink/5"
               >
                 <Phone
                   className="w-5 h-5 text-signal flex-shrink-0 mt-1"
                   strokeWidth={1.5}
                 />
                 <div>
-                  <span className="text-[10px] tracking-[0.25em] uppercase text-white/40 block mb-1">
+                  <span className="text-[10px] tracking-[0.25em] uppercase text-ink/45 block mb-1">
                     Teléfono
                   </span>
-                  <span className="text-white group-hover:text-signal transition text-sm">
+                  <span className="text-ink group-hover:text-signal transition text-sm">
                     {siteConfig.phoneFormatted}
                   </span>
                 </div>
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="group p-5 bg-ink border border-white/10 hover:border-signal/50 hover:bg-signal/[0.03] transition flex items-start gap-4"
+                className="group p-5 bg-white border border-ink/10 hover:border-signal/50 hover:bg-signal/[0.04] transition flex items-start gap-4 shadow-sm shadow-ink/5"
               >
                 <Mail
                   className="w-5 h-5 text-signal flex-shrink-0 mt-1"
                   strokeWidth={1.5}
                 />
                 <div>
-                  <span className="text-[10px] tracking-[0.25em] uppercase text-white/40 block mb-1">
+                  <span className="text-[10px] tracking-[0.25em] uppercase text-ink/45 block mb-1">
                     Email
                   </span>
-                  <span className="text-white group-hover:text-signal transition text-sm break-all">
+                  <span className="text-ink group-hover:text-signal transition text-sm break-all">
                     {siteConfig.email}
                   </span>
                 </div>
               </a>
-              <div className="sm:col-span-2 p-5 bg-ink border border-white/10 flex items-start gap-4">
+              <div className="sm:col-span-2 p-5 bg-white border border-ink/10 flex items-start gap-4 shadow-sm shadow-ink/5">
                 <MapPin
                   className="w-5 h-5 text-signal flex-shrink-0 mt-1"
                   strokeWidth={1.5}
                 />
                 <div>
-                  <span className="text-[10px] tracking-[0.25em] uppercase text-white/40 block mb-1">
+                  <span className="text-[10px] tracking-[0.25em] uppercase text-ink/45 block mb-1">
                     Ubicación
                   </span>
-                  <span className="text-white text-sm">
+                  <span className="text-ink text-sm">
                     {siteConfig.location.address}
                   </span>
                 </div>
@@ -151,13 +150,13 @@ export default function Contact() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.6, delay: 0.15 }}
             onSubmit={handleSubmit}
-            className="bg-ink border border-white/10 p-8 lg:p-10 space-y-6"
+            className="bg-white border border-ink/10 p-8 lg:p-10 space-y-6 shadow-sm shadow-ink/5"
           >
             <div>
-              <h3 className="font-display text-3xl md:text-4xl text-white tracking-tight mb-2">
+              <h3 className="font-display text-3xl md:text-4xl text-ink tracking-tight mb-2">
                 Escríbenos
               </h3>
-              <p className="text-sm text-white/50">
+              <p className="text-sm text-ink/55">
                 Te contactaremos en menos de 1 hora hábil.
               </p>
             </div>
@@ -191,7 +190,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="text-[10px] tracking-[0.25em] uppercase text-white/40 block mb-2">
+                <label className="text-[10px] tracking-[0.25em] uppercase text-ink/45 block mb-2">
                   Mensaje
                 </label>
                 <textarea
@@ -201,7 +200,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full bg-transparent border-b border-white/20 focus:border-signal py-3 text-white placeholder:text-white/30 outline-none transition resize-none"
+                  className="w-full bg-transparent border-b border-ink/20 focus:border-signal py-3 text-ink placeholder:text-ink/35 outline-none transition resize-none"
                   placeholder="¿En qué podemos ayudarte?"
                 />
               </div>
@@ -235,7 +234,7 @@ export default function Contact() {
                 )}
               </motion.button>
 
-              <span className="text-white/40 text-xs uppercase tracking-wider">
+              <span className="text-ink/45 text-xs uppercase tracking-wider">
                 o
               </span>
 
@@ -243,7 +242,7 @@ export default function Contact() {
                 href={siteConfig.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-white/80 hover:text-signal transition text-sm group"
+                className="inline-flex items-center gap-2 text-ink/75 hover:text-signal transition text-sm group"
               >
                 <MessageCircle className="w-4 h-4 group-hover:rotate-12 transition" />
                 Escribir por WhatsApp
@@ -268,7 +267,7 @@ interface FieldProps {
 function Field({ label, type, required, value, onChange, placeholder }: FieldProps) {
   return (
     <div>
-      <label className="text-[10px] tracking-[0.25em] uppercase text-white/40 block mb-2">
+      <label className="text-[10px] tracking-[0.25em] uppercase text-ink/45 block mb-2">
         {label}
       </label>
       <input
@@ -276,7 +275,7 @@ function Field({ label, type, required, value, onChange, placeholder }: FieldPro
         required={required}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-transparent border-b border-white/20 focus:border-signal py-3 text-white placeholder:text-white/30 outline-none transition"
+        className="w-full bg-transparent border-b border-ink/20 focus:border-signal py-3 text-ink placeholder:text-ink/35 outline-none transition"
         placeholder={placeholder}
       />
     </div>

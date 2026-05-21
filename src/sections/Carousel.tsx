@@ -33,7 +33,7 @@ export default function Carousel() {
   }, [emblaApi]);
 
   return (
-    <section className="relative py-24 lg:py-28 overflow-hidden bg-ink-800">
+    <section className="relative py-24 lg:py-28 overflow-hidden bg-white">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-signal/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -51,15 +51,15 @@ export default function Carousel() {
                 href="https://www.instagram.com/ceajmontoya/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs tracking-[0.3em] uppercase text-signal hover:text-white transition"
+                className="text-xs tracking-[0.3em] uppercase text-signal hover:text-ink transition"
               >
                 @ceajmontoya
               </a>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[0.95]">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-ink tracking-tight leading-[0.95]">
               En el <span className="text-signal">Garage</span>
             </h2>
-            <p className="text-white/50 mt-3 max-w-md">
+            <p className="text-ink/55 mt-3 max-w-md">
               Un vistazo a lo que pasa día a día en el centro.
             </p>
           </div>
@@ -67,17 +67,17 @@ export default function Carousel() {
           <div className="flex items-center gap-3">
             <button
               onClick={scrollPrev}
-              className="w-12 h-12 border border-white/20 hover:border-signal hover:bg-signal/10 transition flex items-center justify-center group"
+              className="w-12 h-12 border border-ink/20 hover:border-signal hover:bg-signal/10 transition flex items-center justify-center group"
               aria-label="Slide anterior"
             >
-              <ChevronLeft className="w-5 h-5 text-white/70 group-hover:text-signal" />
+              <ChevronLeft className="w-5 h-5 text-ink/70 group-hover:text-signal" />
             </button>
             <button
               onClick={scrollNext}
-              className="w-12 h-12 border border-white/20 hover:border-signal hover:bg-signal/10 transition flex items-center justify-center group"
+              className="w-12 h-12 border border-ink/20 hover:border-signal hover:bg-signal/10 transition flex items-center justify-center group"
               aria-label="Siguiente slide"
             >
-              <ChevronRight className="w-5 h-5 text-white/70 group-hover:text-signal" />
+              <ChevronRight className="w-5 h-5 text-ink/70 group-hover:text-signal" />
             </button>
           </div>
         </motion.div>
@@ -89,7 +89,7 @@ export default function Carousel() {
                 key={slide.id}
                 className="embla__slide flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_33%] px-4"
               >
-                <div className="relative aspect-[4/5] bg-ink overflow-hidden group cursor-pointer">
+                <div className="relative aspect-[4/5] bg-bone overflow-hidden group cursor-pointer">
                   <Image
                     src={slide.src}
                     alt={slide.alt}
@@ -130,7 +130,7 @@ export default function Carousel() {
               key={i}
               onClick={() => scrollTo(i)}
               className={`h-1 transition-all duration-300 ${
-                i === selectedIndex ? 'w-10 bg-signal' : 'w-4 bg-white/20 hover:bg-white/40'
+                i === selectedIndex ? 'w-10 bg-signal' : 'w-4 bg-ink/20 hover:bg-ink/40'
               }`}
               aria-label={`Ir a slide ${i + 1}`}
             />

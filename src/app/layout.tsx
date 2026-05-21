@@ -69,7 +69,7 @@ export default function RootLayout({
       lang="es"
       className={`${bebasNeue.variable} ${dmSans.variable} ${allura.variable}`}
     >
-      <body className="font-sans bg-ink text-white antialiased">{children}</body>
+      <body className="font-sans bg-white text-ink antialiased">{children}</body>
     </html>
   );
 }

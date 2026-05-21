@@ -17,7 +17,7 @@ export default function Logo({ size = 'md', priority = false }: LogoProps) {
   const height = Math.round(width / (332 / 178));
 
   return (
-    <div className="inline-flex items-center bg-white px-2.5 py-1.5 rounded-sm shadow-md shadow-black/20">
+    <div className="inline-flex items-center bg-white px-2.5 py-1.5 rounded-sm shadow-md shadow-ink/15 ring-1 ring-ink/5">
       <Image
         src="/logo.png"
         alt="CDA JMontoya — Centro de Diagnóstico Automotor"

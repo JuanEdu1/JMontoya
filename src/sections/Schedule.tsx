@@ -6,21 +6,21 @@ import { siteConfig } from '@/data/site';
 
 export default function Schedule() {
   return (
-    <section className="relative py-28 lg:py-32 bg-ink overflow-hidden">
+    <section className="relative py-28 lg:py-32 bg-white overflow-hidden">
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 120, repeat: Infinity, ease: 'linear' }}
-        className="absolute -top-32 -right-32 w-[28rem] h-[28rem] border border-signal/5 rounded-full"
+        className="absolute -top-32 -right-32 w-[28rem] h-[28rem] border border-signal/10 rounded-full"
       />
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ duration: 100, repeat: Infinity, ease: 'linear' }}
-        className="absolute -top-20 -right-20 w-72 h-72 border border-signal/10 rounded-full"
+        className="absolute -top-20 -right-20 w-72 h-72 border border-signal/15 rounded-full"
       />
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
-        className="absolute -bottom-40 -left-40 w-96 h-96 border border-signal/5 rounded-full"
+        className="absolute -bottom-40 -left-40 w-96 h-96 border border-signal/10 rounded-full"
       />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
@@ -38,12 +38,12 @@ export default function Schedule() {
                 Horarios
               </span>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[0.95] mb-6">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-ink tracking-tight leading-[0.95] mb-6">
               Abierto cuando
               <br />
               <span className="text-signal">tú lo necesitas</span>
             </h2>
-            <p className="text-white/60 leading-relaxed mb-6">
+            <p className="text-ink/65 leading-relaxed mb-6">
               No tienes que esperar al fin de semana. Atendemos toda la semana
               con horarios extendidos para acomodarnos a tu agenda.
             </p>
@@ -65,9 +65,9 @@ export default function Schedule() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:col-span-7"
           >
-            <div className="relative bg-ink-800 border border-white/10 p-8 lg:p-12">
+            <div className="relative bg-bone border border-ink/10 p-8 lg:p-12 shadow-sm shadow-ink/5">
               <Clock
-                className="absolute top-8 right-8 w-12 h-12 text-signal/30"
+                className="absolute top-8 right-8 w-12 h-12 text-signal/40"
                 strokeWidth={1}
               />
 
@@ -79,13 +79,13 @@ export default function Schedule() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.25 + i * 0.1 }}
-                    className="flex flex-wrap items-center justify-between gap-4 py-6 border-b border-white/10 last:border-0 group hover:bg-signal/[0.03] -mx-2 px-2 transition"
+                    className="flex flex-wrap items-center justify-between gap-4 py-6 border-b border-ink/10 last:border-0 group hover:bg-signal/[0.05] -mx-2 px-2 transition"
                   >
                     <div>
-                      <span className="text-xs tracking-[0.2em] uppercase text-white/40 block mb-1">
+                      <span className="text-xs tracking-[0.2em] uppercase text-ink/45 block mb-1">
                         {`0${i + 1}`}
                       </span>
-                      <span className="text-white text-lg font-medium">
+                      <span className="text-ink text-lg font-medium">
                         {slot.day}
                       </span>
                     </div>

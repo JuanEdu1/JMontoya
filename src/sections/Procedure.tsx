@@ -18,7 +18,7 @@ export default function Procedure() {
   return (
     <section
       id="procedimiento"
-      className="relative py-28 lg:py-32 bg-ink overflow-hidden"
+      className="relative py-28 lg:py-32 bg-white overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
         <motion.div
@@ -34,26 +34,26 @@ export default function Procedure() {
               Procedimiento
             </span>
           </div>
-          <h2 className="font-display text-5xl md:text-7xl text-white tracking-tight leading-[0.95] mb-6">
+          <h2 className="font-display text-5xl md:text-7xl text-ink tracking-tight leading-[0.95] mb-6">
             5 pasos.
             <br />
             <span className="text-signal">30 minutos.</span>
           </h2>
-          <p className="text-lg text-white/60 max-w-xl">
+          <p className="text-lg text-ink/65 max-w-xl">
             Un proceso transparente y eficiente diseñado para que regreses a la
             carretera con la confianza de saber que tu moto está lista.
           </p>
         </motion.div>
 
         <div ref={containerRef} className="relative">
-          <div className="hidden md:block absolute top-12 left-12 right-12 h-px bg-white/10">
+          <div className="hidden md:block absolute top-12 left-12 right-12 h-px bg-ink/10">
             <motion.div
               style={{ width: progressValue }}
               className="h-full bg-gradient-to-r from-signal via-signal to-signal-dark origin-left"
             />
           </div>
 
-          <div className="md:hidden absolute top-0 bottom-0 left-6 w-px bg-white/10">
+          <div className="md:hidden absolute top-0 bottom-0 left-6 w-px bg-ink/10">
             <motion.div
               style={{ height: progressValue }}
               className="w-full bg-gradient-to-b from-signal via-signal to-signal-dark origin-top"
@@ -77,20 +77,20 @@ export default function Procedure() {
                   className="relative pl-16 md:pl-0"
                 >
                   <div className="absolute md:relative left-0 top-0 md:left-auto md:mb-6">
-                    <div className="w-12 h-12 md:w-24 md:h-24 bg-ink border-2 border-signal flex items-center justify-center font-display text-signal text-2xl md:text-4xl relative z-10">
+                    <div className="w-12 h-12 md:w-24 md:h-24 bg-white border-2 border-signal flex items-center justify-center font-display text-signal text-2xl md:text-4xl relative z-10">
                       {String(step.id).padStart(2, '0')}
                     </div>
                   </div>
 
                   <div className="md:pt-2">
                     <Icon
-                      className="hidden md:block w-6 h-6 text-signal/60 mb-3"
+                      className="hidden md:block w-6 h-6 text-signal/70 mb-3"
                       strokeWidth={1.5}
                     />
-                    <h3 className="font-display text-2xl md:text-3xl text-white tracking-tight mb-2 leading-tight">
+                    <h3 className="font-display text-2xl md:text-3xl text-ink tracking-tight mb-2 leading-tight">
                       {step.title}
                     </h3>
-                    <p className="text-sm text-white/50 leading-relaxed">
+                    <p className="text-sm text-ink/55 leading-relaxed">
                       {step.description}
                     </p>
                   </div>

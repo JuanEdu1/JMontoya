@@ -23,7 +23,7 @@ const requirements = [
 
 export default function Requirements() {
   return (
-    <section className="relative py-28 lg:py-32 bg-ink-800 overflow-hidden">
+    <section className="relative py-28 lg:py-32 bg-bone overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,7 @@ export default function Requirements() {
             </span>
             <span className="w-8 h-px bg-signal" />
           </div>
-          <h2 className="font-display text-5xl md:text-6xl text-white tracking-tight leading-[0.95]">
+          <h2 className="font-display text-5xl md:text-6xl text-ink tracking-tight leading-[0.95]">
             3 cosas que <span className="text-signal">debes saber</span>
           </h2>
         </motion.div>
@@ -55,9 +55,9 @@ export default function Requirements() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: i * 0.12 }}
                 whileHover={{ y: -8 }}
-                className="relative bg-ink p-8 lg:p-10 group overflow-hidden border border-white/[0.06]"
+                className="relative bg-white p-8 lg:p-10 group overflow-hidden border border-ink/10 shadow-sm shadow-ink/5 hover:shadow-md transition-shadow"
               >
-                <span className="absolute top-4 right-6 font-display text-[5rem] leading-none text-white/[0.04] group-hover:text-signal/20 transition-colors duration-500">
+                <span className="absolute top-4 right-6 font-display text-[5rem] leading-none text-ink/[0.05] group-hover:text-signal/25 transition-colors duration-500">
                   {String(i + 1).padStart(2, '0')}
                 </span>
 
@@ -68,10 +68,10 @@ export default function Requirements() {
                       strokeWidth={1.5}
                     />
                   </div>
-                  <h3 className="font-display text-3xl text-white tracking-tight mb-2 leading-tight">
+                  <h3 className="font-display text-3xl text-ink tracking-tight mb-2 leading-tight">
                     {req.title}
                   </h3>
-                  <p className="text-white/60 leading-relaxed text-[15px]">
+                  <p className="text-ink/65 leading-relaxed text-[15px]">
                     {req.description}
                   </p>
                 </div>

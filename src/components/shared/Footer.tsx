@@ -8,14 +8,14 @@ export default function Footer() {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer className="relative bg-ink border-t border-white/5 pt-20 pb-8 overflow-hidden">
+    <footer className="relative bg-ink border-t border-ink/5 pt-20 pb-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
             <a href="#inicio" className="inline-block mb-6">
               <Logo size="md" />
             </a>
-            <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-white/55 text-sm leading-relaxed mb-6 max-w-xs">
               Centro de Diagnóstico Automotor especializado en motocicletas.
               Confianza llanera, técnica de primera.
             </p>
@@ -73,14 +73,14 @@ export default function Footer() {
                 href={siteConfig.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 border border-white/10 hover:border-signal hover:bg-signal text-white/60 hover:text-white transition flex items-center justify-center"
+                className="w-10 h-10 border border-white/15 hover:border-signal hover:bg-signal text-white/60 hover:text-white transition flex items-center justify-center"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 border border-white/10 hover:border-signal hover:bg-signal text-white/60 hover:text-white transition flex items-center justify-center"
+                className="w-10 h-10 border border-white/15 hover:border-signal hover:bg-signal text-white/60 hover:text-white transition flex items-center justify-center"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -90,12 +90,12 @@ export default function Footer() {
         </div>
 
         <div className="overflow-hidden mb-12 pointer-events-none select-none">
-          <h2 className="font-display text-[clamp(4rem,18vw,16rem)] leading-[0.85] tracking-tight text-white/[0.04] whitespace-nowrap">
+          <h2 className="font-display text-[clamp(4rem,18vw,16rem)] leading-[0.85] tracking-tight text-white/[0.05] whitespace-nowrap">
             JMONTOYA
           </h2>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-white/40">
+        <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/40">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. Todos los derechos
             reservados.
@@ -109,7 +109,7 @@ export default function Footer() {
             </a>
             <button
               onClick={scrollTop}
-              className="w-9 h-9 border border-white/10 hover:border-signal hover:bg-signal flex items-center justify-center transition group"
+              className="w-9 h-9 border border-white/15 hover:border-signal hover:bg-signal flex items-center justify-center transition group"
               aria-label="Volver arriba"
             >
               <ArrowUp className="w-4 h-4 group-hover:text-white transition" />

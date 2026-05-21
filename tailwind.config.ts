@@ -11,16 +11,18 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: '#0A0A0A',
-          800: '#141414',
-          700: '#1A1A1A',
+          DEFAULT: '#1F1F24',
+          800: '#2A2A30',
+          700: '#3A3A42',
         },
         signal: {
-          DEFAULT: '#E63946',
-          dark: '#B81D24',
+          DEFAULT: '#FF1F3A',
+          dark: '#D81830',
           glow: '#FF4D5B',
         },
-        bone: '#F5F5F5',
+        bone: '#F7F7F8',
+        line: '#E5E5E8',
+        mute: '#5C5C66',
       },
       fontFamily: {
         display: ['var(--font-display)', 'sans-serif'],
@@ -34,8 +36,8 @@ const config: Config = {
       },
       keyframes: {
         'pulse-glow': {
-          '0%, 100%': { boxShadow: '0 0 0 0 rgba(230, 57, 70, 0.55)' },
-          '50%': { boxShadow: '0 0 0 22px rgba(230, 57, 70, 0)' },
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(255, 31, 58, 0.55)' },
+          '50%': { boxShadow: '0 0 0 22px rgba(255, 31, 58, 0)' },
         },
         'scroll-x': {
           '0%': { transform: 'translateX(0)' },

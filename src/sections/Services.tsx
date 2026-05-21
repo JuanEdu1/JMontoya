@@ -11,9 +11,9 @@ export default function Services() {
   return (
     <section
       id="servicios"
-      className="relative py-28 lg:py-32 bg-ink-800 overflow-hidden"
+      className="relative py-28 lg:py-32 bg-bone overflow-hidden"
     >
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-ink/10 to-transparent" />
 
       <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-signal/10 rounded-full blur-[100px]" />
 
@@ -32,7 +32,7 @@ export default function Services() {
             </span>
             <span className="w-8 h-px bg-signal" />
           </div>
-          <h2 className="font-display text-5xl md:text-7xl text-white tracking-tight leading-[0.95]">
+          <h2 className="font-display text-5xl md:text-7xl text-ink tracking-tight leading-[0.95]">
             Todo lo que tu moto
             <br />
             <span className="text-signal">necesita</span>
@@ -57,11 +57,11 @@ export default function Services() {
                 className={`relative group transition-all duration-500 ${
                   service.highlighted
                     ? 'bg-gradient-to-br from-signal-dark via-signal to-signal-dark shadow-2xl shadow-signal/30 hover:shadow-signal/50'
-                    : 'bg-ink border border-white/10 hover:border-signal/50'
+                    : 'bg-white border border-ink/10 hover:border-signal/50 shadow-sm shadow-ink/5 hover:shadow-md'
                 }`}
               >
                 {service.highlighted && (
-                  <div className="absolute -top-3 left-8 bg-white text-ink px-3 py-1 text-[10px] tracking-[0.25em] uppercase font-bold z-10">
+                  <div className="absolute -top-3 left-8 bg-ink text-white px-3 py-1 text-[10px] tracking-[0.25em] uppercase font-bold z-10">
                     Más Solicitado
                   </div>
                 )}
@@ -83,20 +83,24 @@ export default function Services() {
                     </div>
                     <span
                       className={`text-[10px] tracking-[0.25em] uppercase pt-2 text-right ${
-                        service.highlighted ? 'text-white/70' : 'text-white/30'
+                        service.highlighted ? 'text-white/70' : 'text-ink/40'
                       }`}
                     >
                       {service.subtitle}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tight mb-3 text-white leading-none">
+                  <h3
+                    className={`font-display text-3xl sm:text-4xl md:text-5xl tracking-tight mb-3 leading-none ${
+                      service.highlighted ? 'text-white' : 'text-ink'
+                    }`}
+                  >
                     {service.title}
                   </h3>
 
                   <p
                     className={`mb-6 leading-relaxed text-[15px] ${
-                      service.highlighted ? 'text-white/85' : 'text-white/60'
+                      service.highlighted ? 'text-white/85' : 'text-ink/65'
                     }`}
                   >
                     {service.description}
@@ -104,7 +108,7 @@ export default function Services() {
 
                   <div
                     className={`pb-6 mb-6 border-b ${
-                      service.highlighted ? 'border-white/20' : 'border-white/10'
+                      service.highlighted ? 'border-white/20' : 'border-ink/10'
                     }`}
                   >
                     {service.price ? (
@@ -120,7 +124,7 @@ export default function Services() {
                     ) : (
                       <span
                         className={`font-display text-3xl ${
-                          service.highlighted ? 'text-white' : 'text-white/80'
+                          service.highlighted ? 'text-white' : 'text-ink/85'
                         }`}
                       >
                         {service.priceNote}
@@ -133,7 +137,7 @@ export default function Services() {
                       <li
                         key={feature}
                         className={`flex items-start gap-3 text-sm ${
-                          service.highlighted ? 'text-white/90' : 'text-white/70'
+                          service.highlighted ? 'text-white/90' : 'text-ink/75'
                         }`}
                       >
                         <Check
@@ -153,7 +157,7 @@ export default function Services() {
                     className={`inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] py-3 group/btn ${
                       service.highlighted
                         ? 'text-white'
-                        : 'text-signal hover:text-signal-glow'
+                        : 'text-signal hover:text-signal-dark'
                     }`}
                   >
                     Cotizar ahora

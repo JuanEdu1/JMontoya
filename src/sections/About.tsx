@@ -22,8 +22,8 @@ const cards = [
 
 export default function About() {
   return (
-    <section id="nosotros" className="relative py-28 lg:py-32 bg-ink overflow-hidden">
-      <div className="absolute top-10 right-10 font-display text-[clamp(10rem,20vw,22rem)] leading-none text-white/[0.02] select-none pointer-events-none">
+    <section id="nosotros" className="relative py-28 lg:py-32 bg-white overflow-hidden">
+      <div className="absolute top-10 right-10 font-display text-[clamp(10rem,20vw,22rem)] leading-none text-ink/[0.04] select-none pointer-events-none">
         01
       </div>
 
@@ -41,15 +41,15 @@ export default function About() {
               Nosotros
             </span>
           </div>
-          <h2 className="font-display text-[clamp(2.75rem,8vw,5rem)] md:text-7xl text-white tracking-tight mb-6 leading-[0.95]">
+          <h2 className="font-display text-[clamp(2.75rem,8vw,5rem)] md:text-7xl text-ink tracking-tight mb-6 leading-[0.95]">
             Donde la <span className="text-signal">técnica</span>
             <br />
             se encuentra con la{' '}
-            <span className="font-cursive text-white/90 text-5xl sm:text-6xl md:text-8xl block mt-2">
+            <span className="font-cursive text-ink/85 text-5xl sm:text-6xl md:text-8xl block mt-2">
               pasión
             </span>
           </h2>
-          <p className="text-lg text-white/60 leading-relaxed">
+          <p className="text-lg text-ink/65 leading-relaxed">
             Más que un centro de diagnóstico, somos un equipo de profesionales
             comprometidos con la seguridad de cada motociclista en Villavicencio.
           </p>
@@ -83,17 +83,17 @@ export default function About() {
                 <div className="pl-6 sm:pl-8 py-6">
                   <div className="flex items-center justify-between mb-6 sm:mb-8">
                     <Icon className="w-9 h-9 sm:w-10 sm:h-10 text-signal" strokeWidth={1.5} />
-                    <span className="text-xs tracking-[0.3em] uppercase text-white/40">
+                    <span className="text-xs tracking-[0.3em] uppercase text-ink/40">
                       0{i + 1}
                     </span>
                   </div>
-                  <span className="text-xs tracking-[0.3em] uppercase text-white/40 block mb-2">
+                  <span className="text-xs tracking-[0.3em] uppercase text-ink/40 block mb-2">
                     {card.label}
                   </span>
-                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-4 sm:mb-5 leading-tight">
+                  <h3 className="font-display text-3xl sm:text-4xl md:text-5xl text-ink tracking-tight mb-4 sm:mb-5 leading-tight">
                     {card.title}
                   </h3>
-                  <p className="text-white/60 leading-relaxed text-[15px]">
+                  <p className="text-ink/65 leading-relaxed text-[15px]">
                     {card.description}
                   </p>
                 </div>

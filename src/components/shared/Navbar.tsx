@@ -22,7 +22,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-ink/85 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
+        scrolled ? 'bg-white/85 backdrop-blur-xl border-b border-ink/10 shadow-sm shadow-ink/5' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 h-[68px] sm:h-20 flex items-center justify-between">
@@ -40,7 +40,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm tracking-wide text-white/70 hover:text-white transition relative group"
+              className="text-sm tracking-wide text-ink/70 hover:text-ink transition relative group"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-signal group-hover:w-full transition-all duration-300" />
@@ -61,7 +61,7 @@ export default function Navbar() {
         </motion.a>
 
         <button
-          className="md:hidden text-white w-11 h-11 -mr-2 flex items-center justify-center"
+          className="md:hidden text-ink w-11 h-11 -mr-2 flex items-center justify-center"
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}
@@ -77,7 +77,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-ink/95 backdrop-blur-xl border-t border-white/5"
+            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-t border-ink/10"
           >
             <div className="px-5 sm:px-6 py-4 flex flex-col">
               {siteConfig.navLinks.map((link) => (
@@ -85,7 +85,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-white/80 hover:text-signal active:text-signal transition tracking-wide py-3.5 border-b border-white/5 last:border-0 flex items-center justify-between group"
+                  className="text-ink/80 hover:text-signal active:text-signal transition tracking-wide py-3.5 border-b border-ink/10 last:border-0 flex items-center justify-between group"
                 >
                   <span>{link.label}</span>
                   <span className="text-signal opacity-0 group-hover:opacity-100 transition">→</span>
