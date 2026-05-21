@@ -2,6 +2,7 @@ import Script from 'next/script';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+import SplashScreen from '@/components/shared/SplashScreen';
 import Hero from '@/sections/Hero';
 import Carousel from '@/sections/Carousel';
 import About from '@/sections/About';
@@ -71,6 +72,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <SplashScreen />
       <Navbar />
       <main>
         <Hero />
